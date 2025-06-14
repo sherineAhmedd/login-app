@@ -1,28 +1,33 @@
-<div class="container-fluid p-0">
+
+<div class="container mt-4 p-0">
   <div class="row no-gutters">
     <div class="col-md-6 bg-light p-5">
-      <div class="text-center">
-        <h2>Welcome Back <span role="img" aria-label="wave">👋</span></h2>
-        <p class="text-muted">Kindly fill in your details below to sign in to your account</p>
-        <form>
+      <div class="p-5 me-3">
+        <h3>Welcome Back <span role="img" aria-label="wave">👋</span></h3>
+        <p class="text-muted fw-semibold fs-6">Kindly fill in your details below to sign in to your account</p>
+        <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
           <div class="form-group">
-            <input type="email" class="form-control" placeholder="Email Address" required>
-            <small class="form-text text-muted">Please enter your email</small>
+           <h4 class="form-text text-muted mt-3">Email Address</h4>
+            <input type="email" class="form-control fw-light p-3" formControlName="username" placeholder="Please enter your email" required>
           </div>
-          <div class="form-group">
-            <input type="password" class="form-control" placeholder="Password" required>
-            <small class="form-text text-muted">Please enter your password</small>
+          <div class="form-group position-relative">
+          <h4 class="form-text text-muted mt-3">Enter Password</h4>
+
+            <input type="password" class="form-control fw-light p-3" formControlName="password"  placeholder="Please enter your password" required>
+             <i class="bi bi-eye-slash position-absolute mt-1 p-3" id="togglePassword"
+                style="top: 50px; right: 10px; transform: translateY(-50%); cursor: pointer;"></i>
           </div>
-          <button type="submit" class="btn btn-primary btn-block mt-4">Sign In</button>
-          <p class="text-center mt-3">Don't have an account? <a href="#">Sign Up</a></p>
+          <button type="submit" [disabled]="loginForm.invalid" class="btn btn-block mt-4 w-100 text-white "style="background-color: rgb(17, 111, 189);">Sign In</button>
+          <p class="text-center text-muted mt-3 fw-semibold">Don't have an account? <a href="#" class="fw-bold">Sign Up</a></p>
         </form>
       </div>
     </div>
-    <div class="col-md-6" style="background: url('https://via.placeholder.com/600x400') no-repeat center center; background-size: cover;">
-      <div class="bg-dark bg-opacity-50 p-5 text-white text-center" style="height: 100%;">
-        <h2>Lorem Ipsum is simply dummy</h2>
+    <div class="col-md-6  position-relative d-flex justify-content-center align-items-center p-0" style="background: url('/assets/images/company2.jpg') no-repeat center center; background-size: cover;">
+      <div class="bg-dark bg-opacity-50 p-5 text-white text-center" style="width: 70%; height: 50%; background: linear-gradient(to top left, rgba(255, 255, 255, 0.103), rgba(255,255,255,0.8));">
+        <h1 class="fw-semibold">Lorem Ipsum is simply dummy</h1>
         <p class="mt-3">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
       </div>
     </div>
   </div>
 </div>
+
