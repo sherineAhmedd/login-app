@@ -1,0 +1,9 @@
+.custom-btn {
+  background: linear-gradient(to right, #4f88c5, #0e75e2); /* Blue gradient */
+  padding: 1rem 3rem;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 0;
+   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2); /* soft white glow */
+ 
+}
