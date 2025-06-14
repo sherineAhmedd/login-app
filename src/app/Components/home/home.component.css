@@ -7,3 +7,22 @@
    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2); /* soft white glow */
  
 }
+.hover-line .line {
+  position: absolute;
+  bottom: -2em;
+  left: 0;
+  height: 4px;
+  background-color: #007bff; /* Bootstrap primary blue */
+  width: 0%;
+  transition: width 0.3s ease-in-out;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.hover-line:hover .line {
+  width: 100%;
+}
+img {
+  display: block;
+  padding-left: 2em;
+}
