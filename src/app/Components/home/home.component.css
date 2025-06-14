@@ -12,8 +12,7 @@
   bottom: -2em;
   left: 0;
   height: 4px;
-  background-color: #007bff; /* Bootstrap primary blue */
-  width: 0%;
+  background-color: #007bff; 
   transition: width 0.3s ease-in-out;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;

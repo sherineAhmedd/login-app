@@ -22,7 +22,7 @@ export class LoginComponent {
   
   loginSubmit(): void {
     const payload = this.loginForm.getRawValue();
-  console.log('Form Data Sent:', payload); // ADD THIS
+  console.log('Form Data Sent:', payload); 
 
   if (this.loginForm.valid) {
     this.authService.login(payload).subscribe({
